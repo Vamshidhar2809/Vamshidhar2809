@@ -14,6 +14,7 @@ A simple Python application designed to manage a fictional ice cream parlor caf√
 **Requirements**
 ---------------
 -> Python 3.x
+
 -> SQLite
 
 **Installation**
@@ -29,6 +30,7 @@ Navigate to the directory containing the application files.
 Execute the following commands to set up the database and run the application:
 
 _setup.py__: This script initializes the SQLite database with the required tables and inserts initial data if needed.
+
 _app.py_: This is the main application script that runs the interactive menu for managing the ice cream parlor caf√©.
 
 **Usage**
