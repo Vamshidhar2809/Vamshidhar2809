@@ -1,0 +1,25 @@
+CREATE TABLE IF NOT EXISTS Flavors (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL UNIQUE,
+    season TEXT,
+    description TEXT
+);
+
+CREATE TABLE IF NOT EXISTS Ingredients (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL UNIQUE,
+    flavor_id INTEGER,
+    FOREIGN KEY(flavor_id) REFERENCES Flavors(id)
+);
+
+CREATE TABLE IF NOT EXISTS Allergens (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL UNIQUE
+);
+
+CREATE TABLE IF NOT EXISTS UserPreferences (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_name TEXT NOT NULL,
+    preferred_flavors TEXT,
+    allergies TEXT
+);
